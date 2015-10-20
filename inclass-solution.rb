@@ -52,7 +52,7 @@ class Apartment
     # method 1
     # if tenant is a Tenant Object Class, use the .name method to get the name
     # else tenant is a String Class, simply make name equal to the string (equal to tenant variable)
-    name_to_match = tenant.class == Tenant ? tenant.name : tenant
+    name_to_match = tenant.is_a?(Tenant) ? tenant.name : tenant
     # check if any tenant inside the @tenants array have a name equal to name_to_match
     # if match is found, delete that tenant from the @tenants array
     # else raise an error saying no tenant found
